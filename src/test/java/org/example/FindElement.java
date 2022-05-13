@@ -26,12 +26,13 @@ public class FindElement {
 
         driver.findElement(By.id("FirstName")).sendKeys("Preety");
        driver.findElement(By.id("LastName")).sendKeys("shah");
-        driver.findElement(By.id("Email")).sendKeys("preety2@yahoo.com");
+        driver.findElement(By.id("Email")).sendKeys("preety21@yahoo.com");
         driver.findElement(By.id("Password")).sendKeys("123456");
         driver.findElement(By.id("ConfirmPassword")).sendKeys("123456");
        driver.findElement((By.id("register-button"))).submit();
-      // driver.findElement(By.xpath("//div[@class='result')]")).getText();
-        System.out.println("Registration completed");
+        String text1= driver.findElement(By.xpath("//div[contains(text(),'Your registration completed')]")).getText();
+        System.out.println("Successful login -"+text1);
+        System.out.println("Registration completed"+ text1);
     }@After
     public void tearDown() throws InterruptedException{
         Thread.sleep(5000);
