@@ -30,7 +30,7 @@ public class FindElement {
         driver.findElement(By.id("Password")).sendKeys("123456");
         driver.findElement(By.id("ConfirmPassword")).sendKeys("123456");
        driver.findElement((By.id("register-button"))).submit();
-      // driver.findElement(By.linkText("Your Registration Completed"));
+      // driver.findElement(By.xpath("//div[@class='result')]")).getText();
         System.out.println("Registration completed");
     }@After
     public void tearDown() throws InterruptedException{
